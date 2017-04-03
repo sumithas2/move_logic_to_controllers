@@ -7,8 +7,8 @@ gem 'rails', '3.2.6'
 
 gem 'sqlite3'
 
-gem 'ffaker'
-
+#gem 'ffaker'
+gem 'faker', :group => :development
 
 gem 'thin'
 

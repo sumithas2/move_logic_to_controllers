@@ -1,5 +1,5 @@
-require 'ffaker'
-
+#require 'ffaker'
+require 'faker'
 
 namespace :fake do
   desc "adds fake data to your project"
@@ -16,7 +16,8 @@ namespace :fake do
     end
 
     def create_product(user)
-      name   = Faker::Product.product_name
+      #name   = Faker::Product.product_name
+      name  = Faker::Commerce.product_name
       price  = rand(1000) + 1
       puts "    - Creating Product: #{name}: $#{price} sold by #{user.name}"
       user.products.create(:name => name, :price => price)
